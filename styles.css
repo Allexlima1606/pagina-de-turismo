@@ -1,0 +1,371 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #6f889241;
+  padding: 10px;
+  margin: 10px;
+}
+
+header img {
+  height: 200px;
+}
+
+#topo {
+  background-image: url("assets/imagen-logo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 70px;
+}
+
+.descubra-destino {
+  gap: 20px;
+  margin-top: 400px;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 10px;
+  z-index: 1000;
+  gap: 50px;
+  margin: 10px;
+  background: #6f889265;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+nav ul li a {
+  color: #141414;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-item h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+.carousel-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#banner h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#banner p {
+  font-size: 36px;
+}
+
+#destinos,
+#pacotes,
+#contato {
+  margin: 50px 0;
+}
+
+#destinos h2,
+#pacotes h2,
+#contato h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077b6;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#pacotes p,
+#destinos p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 22px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Botões */
+.btn,
+.btn-destino {
+  display: inline-block;
+  background: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn {
+  font-size: 20px;
+}
+
+.btn-destino {
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn-destino:hover {
+  background: #94d2bd;
+  transform: scale(1.05);
+}
+
+.destinos-container,
+.pacotes-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.destinos-container article,
+.pacotes-container .pacote {
+  background: #d4cbcb;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.destinos-container article:hover,
+.pacotes-container .pacote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destinos-container img,
+.pacotes-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destinos-container img:hover,
+.pacotes-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destinos-container h3,
+.pacotes-container h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+.destinos-container p,
+.pacotes-container p {
+  padding: 0 15px 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+footer {
+  background: #0077b6;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.modal ul li {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  font-size: 20px;
+}
+
+footer ul li a:hover {
+  color: #caf0f8;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 90px;
+  height: 90px;
+  font-size: 40px;
+  background: #0077b6;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #94d2bd;
+  transform: scale(1.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .destinos-container,
+  .pacotes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #banner {
+    padding: 40px 15px;
+  }
+
+  #banner h2 {
+    font-size: 2rem;
+  }
+
+  #banner p {
+    font-size: 1rem;
+  }
+
+  .destinos-container img,
+  .pacotes-container img {
+    height: auto;
+  }
+}
