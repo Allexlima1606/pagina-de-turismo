@@ -163,6 +163,13 @@ nav ul li a:hover {
   font-size: 22px;
 }
 
+#contato a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -296,16 +303,22 @@ nav ul li a:hover {
   color: #555;
 }
 
-footer {
+#contato {
   background: #0077b6;
   color: #fff;
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
 
-footer p {
+#contato h2 {
+  color: #fff;
+  font-size: 38px;
+  padding-top: 20px;
+}
+
+#contato p {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 .modal ul li {
@@ -355,7 +368,8 @@ footer ul li a:hover {
   }
 
   #topo {
-    height: 50%; /* Ajusta a altura */
+    height: 100%; /* Ajusta a altura */
+    width: 100%;
   }
 
   nav ul {
@@ -430,5 +444,33 @@ footer ul li a:hover {
 
   #contato p {
     font-size: 18px;
+  }
+
+  #destinos {
+    margin: 20px 0;
+  }
+
+  #backToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background: #0077b6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn:hover,
+  .btn-destino:hover {
+    background: #94d2bd;
+    transform: scale(1.05);
   }
 }
