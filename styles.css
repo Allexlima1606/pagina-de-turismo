@@ -15,7 +15,7 @@ body {
 }
 
 header img {
-  height: 200px;
+  height: auto;
 }
 
 #topo {
@@ -23,7 +23,8 @@ header img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 90vh;
+  width: 100%;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
@@ -37,19 +38,21 @@ header img {
   color: #fff;
 }
 
+.inicio {
+  width: 98%;
+  margin-left: 0px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   position: fixed;
   justify-content: center;
-  align-items: center;
   height: 60px;
-  width: 100%;
   top: 0;
-  left: 10px;
   z-index: 1000;
-  gap: 50px;
+  gap: 30px;
   margin: 10px;
   background: #6f889265;
   border-radius: 10px;
@@ -322,13 +325,16 @@ nav ul li a:hover {
 }
 
 .modal ul li {
-  height: 60px;
+  height: 50px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  list-style: none;
+  margin-top: 3px;
   font-size: 20px;
+}
+
+.modal p {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 footer ul li a:hover {
@@ -359,17 +365,27 @@ footer ul li a:hover {
 }
 
 /* Responsividade para o body */
-@media (max-width: 768px) {
-  body img {
+@media (max-width: 500px) {
+  body {
     width: 100%;
     height: auto;
-    padding: 5px; /* Reduz o espaçamento interno */
-    margin: 5px; /* Reduz o espaçamento externo */
+    margin-right: 60px;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    padding: 5px; /*Reduz o espaçamento interno*/
+    margin: 5px; /*Reduz o espaçamento externo*/
   }
 
   #topo {
-    height: 100%; /* Ajusta a altura */
-    width: 115%;
+    min-width: 390px;
+    height: auto; /* Ajusta a altura */
+  }
+
+  .inicio {
+    width: 95%;
   }
 
   nav ul {
@@ -377,7 +393,7 @@ footer ul li a:hover {
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: auto;
     top: 0;
     left: 10px;
     z-index: 1000;
@@ -398,15 +414,29 @@ footer ul li a:hover {
 
   #destinos h2,
   #pacotes h2 {
+    margin-left: 90px;
     font-size: 35px; /* Ajusta o tamanho da fonte */
+  }
+
+  #pacotes p {
+    margin-left: 90px;
   }
 
   .men .descubra-destino h2 {
     font-size: 12px; /* Ajusta o tamanho da fonte */
   }
 
-  .descubra-destino p {
-    font-size: 1rem; /* Ajusta o tamanho da fonte */
+  .descubra-destino p,
+  .modal-content p {
+    font-size: 19px; /* Ajusta o tamanho da fonte */
+  }
+
+  .modal ul {
+    margin-bottom: 20px;
+  }
+
+  .modal-content {
+    padding: 10px;
   }
 
   #banner {
@@ -434,6 +464,10 @@ footer ul li a:hover {
   .destinos-container img,
   .pacotes-container img {
     height: auto;
+  }
+
+  #contato {
+    width: 400px;
   }
 
   #contato h2 {

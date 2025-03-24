@@ -47,28 +47,6 @@ function moveCarousel(modalId, direction) {
   carousel.style.transform = `translateX(${offset}%)`;
 }
 
-// Fechar o modal ao clicar fora do conteúdo
-window.addEventListener("click", function (e) {
-  const modals = document.querySelectorAll(".modal");
-  modals.forEach((modal) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-});
-
-// Filtro de destinos
-function filterDestinos(categoria) {
-  const destinos = document.querySelectorAll(".destinos-container article");
-  destinos.forEach((destino) => {
-    if (destino.classList.contains(categoria)) {
-      destino.style.display = "block";
-    } else {
-      destino.style.display = "none";
-    }
-  });
-}
-
 // Scroll suave
 document.querySelectorAll("nav ul li a").forEach((link) => {
   link.addEventListener("click", function (e) {
@@ -85,7 +63,7 @@ document.querySelectorAll("nav ul li a").forEach((link) => {
 const backToTopButton = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
+  if (window.scrollY > 950) {
     backToTopButton.style.display = "block";
   } else {
     backToTopButton.style.display = "none";
