@@ -1,15 +1,14 @@
+// Contador de visitas
+let visitCount = localStorage.getItem("visitCount") || 0;
+visitCount++;
+localStorage.setItem("visitCount", visitCount);
+document.getElementById("contador").innerText = `Visitas: ${visitCount}`;
+
 // Abrir e fechar modal
 function openModal(id) {
   const modal = document.getElementById(`modal-${id}`);
   if (modal) {
     modal.style.display = "flex";
-  }
-}
-
-function openModal(id) {
-  const modal = document.getElementById(`modal-${id}`);
-  if (modal) {
-    modal.classList.add("show");
   }
 }
 
@@ -26,23 +25,16 @@ function moveCarousel(modalId, direction) {
   const items = modal.querySelectorAll(".carousel-item");
   const totalItems = items.length;
 
-  // Obtenha o índice atual do carrossel
   let currentIndex = parseInt(carousel.dataset.currentIndex) || 0;
-
-  // Atualize o índice
   currentIndex += direction;
 
-  // Verifique os limites
   if (currentIndex < 0) {
     currentIndex = totalItems - 1;
   } else if (currentIndex >= totalItems) {
     currentIndex = 0;
   }
 
-  // Atualize o índice no dataset
   carousel.dataset.currentIndex = currentIndex;
-
-  // Mova o carrossel
   const offset = -currentIndex * 100;
   carousel.style.transform = `translateX(${offset}%)`;
 }
@@ -53,9 +45,7 @@ document.querySelectorAll("nav ul li a").forEach((link) => {
     e.preventDefault();
     const targetId = this.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-    });
+    targetElement.scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -71,10 +61,7 @@ window.addEventListener("scroll", () => {
 });
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 // Animações ao carregar os destinos
@@ -87,20 +74,6 @@ window.addEventListener("load", () => {
     }, index * 200);
   });
 });
-
-function openModal(id) {
-  const modal = document.getElementById(`modal-${id}`);
-  if (modal) {
-    modal.style.display = "flex";
-  }
-}
-
-function closeModal(id) {
-  const modal = document.getElementById(`modal-${id}`);
-  if (modal) {
-    modal.style.display = "none";
-  }
-}
 
 // Fechar o modal ao clicar fora do conteúdo
 window.addEventListener("click", function (e) {
